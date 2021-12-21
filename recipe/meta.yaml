@@ -1,5 +1,5 @@
 {% set name = "upolygon" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/v7labs/upolygon/archive/v{{ version }}.tar.gz
-  sha256: dbd670e99ed81eae0bd67ebb51705be297c9c2ced4425829a8e22afcb0a60a3a
+  sha256: 49ac5a6b79aa6986525f370d069303671517488aa7776f91933922a8d019a45e
 
 build:
   number: 0
-  skip: true   # [py2k]
+  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   script: USE_CYTHON=true {{ PYTHON }} -m pip install . -vv  # [not win]
 
