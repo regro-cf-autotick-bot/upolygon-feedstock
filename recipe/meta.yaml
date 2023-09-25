@@ -10,7 +10,7 @@ source:
   sha256: 99f69abae82b13cdaca24bda8f11a66c23e85e03aa5e1468f0ae9315e7fcf0bd
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   script: USE_CYTHON=true {{ PYTHON }} -m pip install . -vv  # [not win]
